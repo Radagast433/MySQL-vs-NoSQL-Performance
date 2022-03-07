@@ -324,8 +324,82 @@ def GUI():
     
     ########## Frame levels ##############
 
+    ##################### GENERAL FRAMES #####################
+
+    general_frame_1 = ttk.Frame(root)
+    general_frame_1.pack(side = 'top')
+
+    general_frame_2 = ttk.Frame(root)
+    general_frame_2.pack(side = 'top')
+
+    general_frame_3 = ttk.Frame(root)
+    general_frame_3.pack(side = 'top')
+
+    general_frame_4 = ttk.Frame(root)
+    general_frame_4.pack(side = 'top')
+
+    ##########################################################
+
+    #################### GENERAL FRAME 1 SUB FRAMES ####################
+
+    gf_1_column_1 = ttk.Frame(general_frame_1)
+    gf_1_column_1.pack(side = 'left')
+
+    gf_1_column_2 = ttk.Frame(general_frame_1)
+    gf_1_column_2.pack(side = 'left', padx = 220)
+
+    gf_1_column_3 = ttk.Frame(general_frame_1)
+    gf_1_column_3.pack(side = 'left')
+
+    ####################################################################
+
+    ################### gf_1_column_1 SUB FRAMES #######################
+
+    column_1_div_1 = ttk.Frame(gf_1_column_1)
+    column_1_div_1.pack(side = 'top')
+
+    column_1_div_2 = ttk.Frame(gf_1_column_1)
+    column_1_div_2.pack(side = 'top')
+
+    ################### gf_1_column_2 SUB FRAMES #######################
+
+    column_2_div_1 = ttk.Frame(gf_1_column_2)
+    column_2_div_1.pack(side = 'top')
+
+    column_2_div_2 = ttk.Frame(gf_1_column_2)
+    column_2_div_2.pack(side = 'top')
+
+    ################### gf_1_column_3 SUB FRAMES #######################
+
+    column_3_div_1 = ttk.Frame(gf_1_column_3)
+    column_3_div_1.pack(side = 'top')
+
+    column_3_div_2 = ttk.Frame(gf_1_column_3)
+    column_3_div_2.pack(side = 'top')
+
+    ##############################################################
+
+    ##################### column_1_div_2 DIVITION FOR BUTTONS #######################
     
-    ##### Level 1 #####
+    div_2_top_div_c1 = ttk.Frame(column_1_div_2)
+    div_2_top_div_c1.pack(side = 'top')
+
+    div_2_bottom_c1 = ttk.Frame(column_1_div_2)
+    div_2_bottom_c1.pack(side = 'top')
+
+    ##################### column_2_div_2 DIVITION FOR BUTTONS #######################
+    
+    div_2_top_div_c2 = ttk.Frame(column_2_div_2)
+    div_2_top_div_c2.pack(side = 'top')
+
+    div_2_bottom_c2 = ttk.Frame(column_2_div_2)
+    div_2_bottom_c2.pack(side = 'top')
+
+    ###############################################################################################################################################
+
+    ###############################################################################################################################################
+
+    '''##### Level 1 #####
     
     left_frame = ttk.Frame(root)
     left_frame.pack(side = 'left')
@@ -366,108 +440,111 @@ def GUI():
     level2R_2.pack(side = 'top')
 
     level2R_2 = ttk.Frame(left_frame)
-    level2R_2.pack(side = 'top')
+    level2R_2.pack(side = 'top')'''
     
     ################## Frame 1 ##########################
 
-    packet_loss_label_2 = ttk.Label( level2L_1,text = '\nIngrese datos a buscar.', font=("Calibri"), justify = 'center')
-    packet_loss_label_2.pack(side = 'left')
+    packet_loss_label_2 = ttk.Label(column_1_div_1, text = '\nIngrese datos a buscar.', font=("Calibri"), justify = 'center')
+    packet_loss_label_2.pack(side = 'top')
 
-    duration_entrybox = ttk.Entry(level2L_1)
-    duration_entrybox.pack(side = 'left')
+    duration_entrybox = ttk.Entry(column_1_div_1)
+    duration_entrybox.pack(side = 'top')
 
-    packet_loss_label_22 = ttk.Label( level2L_12,text = '\nIngrese cantidad\nde paquetesss.', font=("Calibri"), justify = 'center')
-    packet_loss_label_22.pack(side = 'left')
+    packet_loss_label_22 = ttk.Label(column_2_div_1,text = '\nIngrese cantidad\nde paquetesss.', font=("Calibri"), justify = 'center')
+    packet_loss_label_22.pack(side = 'top')
 
-    duration_entrybox1 = ttk.Entry(level2L_12)
-    duration_entrybox1.pack(side = 'left')
+    duration_entrybox1 = ttk.Entry(column_2_div_1)
+    duration_entrybox1.pack(side = 'top')
 
-    packet_loss_label_23 = ttk.Label( level2L_13,text = '\nIngrese cantidad\nde paquetesss.', font=("Calibri"), justify = 'center')
-    packet_loss_label_23.pack(side = 'left')
+    packet_loss_label_23 = ttk.Label( column_3_div_1,text = '\nIngrese cantidad\nde paquetesss.', font=("Calibri"), justify = 'center')
+    packet_loss_label_23.pack(side = 'top')
 
-    duration_entrybox2 = ttk.Entry(level2L_13)
-    duration_entrybox2.pack(side = 'left')
+    duration_entrybox2 = ttk.Entry(column_3_div_1)
+    duration_entrybox2.pack(side = 'top')
 
 
     
-    begin_button = ttk.Button(level2L_1, text= 'Iniciar', command=lambda:(rand(duration_entrybox),Test1(log_box)))
+    begin_button = ttk.Button(div_2_top_div_c1, text= 'Iniciar', command=lambda:(rand(duration_entrybox),Test1(log_box)))
     begin_button.pack(side = 'left')
 
-    begin_button1 = ttk.Button(level2L_12, text= 'Iniciar1', command=lambda:(rand1(duration_entrybox1),Test2(log_box2)))
+    begin_button1 = ttk.Button(div_2_top_div_c2, text= 'Iniciar1', command=lambda:(rand1(duration_entrybox1),Test2(log_box2)))
     begin_button1.pack(side = 'left')
 
-    begin_button2 = ttk.Button(level2L_13, text= 'Iniciar2', command=lambda:(rand2(duration_entrybox2),Test3(log_box3)))
-    begin_button2.pack(side = 'left')
+    begin_button2 = ttk.Button(column_3_div_1, text= 'Iniciar2', command=lambda:(rand2(duration_entrybox2),Test3(log_box3)))
+    begin_button2.pack(side = 'top')
 
     
-    label_2 = ttk.Label(level2L_1)
-    label_2.pack(side = 'left')
+    #label_2 = ttk.Label(level2L_1)
+    #label_2.pack(side = 'left')
 
     
 
     
-    stop_button = ttk.Button(level2L_1, text= 'Detener', command=lambda:THREAD_STOP(log_box))
+    stop_button = ttk.Button(div_2_top_div_c1, text= 'Detener', command=lambda:THREAD_STOP(log_box))
     stop_button.pack(side = 'left')
 
-    label_221 = ttk.Label(level2L_12)
-    label_221.pack(side = 'left')
+    #label_221 = ttk.Label(level2L_12)
+    #label_221.pack(side = 'left')
 
     
-    stop_button1 = ttk.Button(level2L_12, text= 'Detener', command=lambda:THREAD_STOP(log_box2))
+    stop_button1 = ttk.Button(div_2_top_div_c2, text= 'Detener', command=lambda:THREAD_STOP(log_box2))
     stop_button1.pack(side = 'left')
 
     
 
     
     
-    label_3 = ttk.Label(level2L_1)
-    label_3.pack(side = 'left')
+    #label_3 = ttk.Label(level2L_1)
+    #label_3.pack(side = 'left')
     
-    graph_button = ttk.Button(level2L_1, text= 'Mostrar Grafico', command=lambda:SHOW_GRAPH())
+    graph_button = ttk.Button(div_2_bottom_c1, text= 'Mostrar Grafico', command=lambda:SHOW_GRAPH())
     graph_button.pack(side = 'left')
     
-    label_4 = ttk.Label(level2L_2)
+    label_4 = ttk.Label(div_2_bottom_c1)
     label_4.pack(side = 'left')
 
-    graph_button1 = ttk.Button(level2L_12, text= 'Mostrar Grafico', command=lambda:SHOW_GRAPH())
+    graph_button1 = ttk.Button(div_2_bottom_c2, text= 'Mostrar Grafico', command=lambda:SHOW_GRAPH())
     graph_button1.pack(side = 'left')
     
-    label_44 = ttk.Label(level2L_12)
+    label_44 = ttk.Label(div_2_bottom_c2)
     label_44.pack(side = 'left')
     
     #live_graph_button = ttk.Button(level2L_1, text= 'Mostrar Grafico en Vivo', command=lambda:GRAPH_THREAD())
     #live_graph_button.pack(side = 'left')
     
-    label_5 = ttk.Label(level2L_1)
-    label_5.pack(side = 'left')
+    #label_5 = ttk.Label(level2L_1)
+    #label_5.pack(side = 'left')
     
-    exit_button = ttk.Button(level2L_1, text= 'Salir', command=lambda:EXIT_APP(root))
+    exit_button = ttk.Button(div_2_bottom_c1, text= 'Salir', command=lambda:EXIT_APP(root))
     exit_button.pack(side = 'left')
     
-    label_6 = ttk.Label(level2L_1)
-    label_6.pack(side = 'left')
+    #label_6 = ttk.Label(level2L_1)
+    #label_6.pack(side = 'left')
 
-    exit_button1 = ttk.Button(level2L_12, text= 'Salir', command=lambda:EXIT_APP(root))
+    exit_button1 = ttk.Button(div_2_bottom_c2, text= 'Salir', command=lambda:EXIT_APP(root))
     exit_button1.pack(side = 'left')
     
-    label_66 = ttk.Label(level2L_12)
-    label_66.pack(side = 'left')
+    #label_66 = ttk.Label(div_2_bottom_c2)
+    #label_66.pack(side = 'left')
     
     ################## Frame 2 ##################
     
-    label_7 = ttk.Label(level2L_2, text = 'log')
+    label_7 = ttk.Label(general_frame_2, text = 'log')
     label_7.pack(side = 'top')
     
     ################## Frame 3 ##################
     
-    log_box = scrolledtext.ScrolledText(level2L_3, wrap="word", height = 1082, width = int(1920/45))
+    log_box = scrolledtext.ScrolledText(general_frame_3, wrap="word", height = 30, width = int(1920/45))
     log_box.pack(side = 'left')
 
-    log_box2 = scrolledtext.ScrolledText(level2L_3, wrap="word", height = 1082, width = int(1920/45))
+    log_box2 = scrolledtext.ScrolledText(general_frame_3, wrap="word", height = 30, width = int(1920/45))
     log_box2.pack(side = 'left')
 
-    log_box3 = scrolledtext.ScrolledText(level2L_3, wrap="word", height = 1082, width = int(1920/45))
+    log_box3 = scrolledtext.ScrolledText(general_frame_3, wrap="word", height = 30, width = int(1920/45))
     log_box3.pack(side = 'left')
+
+    label_recursos = ttk.Label(general_frame_4, text = 'Recursos')
+    label_recursos.pack(side = 'top', pady = 10)
     
     root.mainloop()
     
